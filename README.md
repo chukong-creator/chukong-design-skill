@@ -86,7 +86,7 @@ Use $chukong-design to review this settings page on desktop and mobile.
 
 这个 skill 学习了 Claude Design 工作流里最有价值的部分，并把它改写成跨 Agent 可执行的方法。它不是把某个模型的隐藏 prompt 原样复制，也不是要求每个小改动都走完整流程。适用于新视觉方向、重要页面、高保真原型和质量敏感的重设计；小 bug、单个 token、纯无障碍审查或短文案修改可以直接处理。
 
-完整的公开工作流参考见 [`references/ai-design-loop.md`](https://github.com/chukong-creator/chukong-design/blob/main/references/ai-design-loop.md)，Claude Code 的工具适配见 [`references/claude.md`](https://github.com/chukong-creator/chukong-design/blob/main/references/claude.md)。方法本身分为七个相互衔接的环节：
+完整的公开工作流参考见 [`ai-design-loop.md`](https://github.com/chukong-creator/chukong-design/blob/main/skills/chukong-design/references/ai-design-loop.md)，Claude Code 的工具适配见 [`claude.md`](https://github.com/chukong-creator/chukong-design/blob/main/skills/chukong-design/references/claude.md)。方法本身分为七个相互衔接的环节：
 
 | 环节 | 具体做法 | 产生的证据 |
 | --- | --- | --- |
@@ -129,7 +129,7 @@ Use $chukong-design to review this settings page on desktop and mobile.
 | [Vercel Design](https://vercel.com/design.md) / [Dark](https://vercel.com/design.dark.md) | 设计文档的组织方式、明暗主题表达、系统化说明；不直接复制品牌视觉 |
 | [Meta Design](https://design.facebook.com/) | 大型产品系统的可读性、可扩展性与组件/内容关系；不把 Meta 品牌当作初空规则 |
 | [Fluid Functionalism](https://github.com/mickadesign/fluid-functionalism) | 流体布局、空间关系、功能性动效和组件组合的研究样本；先理解机制再适配 |
-| [Claude Design workflow](https://github.com/chukong-creator/chukong-design/tree/main/references) | 上下文→探索→定义→构建→批评→减法→验证的设计闭环；借鉴方法，不复制 Claude/Anthropic 品牌或专有内容 |
+| [Claude Design workflow](https://github.com/chukong-creator/chukong-design/tree/main/skills/chukong-design/references) | 上下文→探索→定义→构建→批评→减法→验证的设计闭环；借鉴方法，不复制 Claude/Anthropic 品牌或专有内容 |
 | [How I Design with AI](https://x.com/reactiverobot/status/2092638003789439075) / [可读镜像](https://www.linkedin.com/pulse/how-i-design-ai-matt-dailey-cfe1e) | 先看整体约束、删除多余元素、隔离迭代、组件库、真实数据预览、收集参考、持续训练审美 |
 
 ## Reference precedence

@@ -47,7 +47,7 @@ For a new visual direction, important surface, high-fidelity prototype, or quali
 - **Deliver:** run a subtraction pass. Remove or simplify elements that do not improve understanding, action, trust, orientation, feedback, or the intended feeling; do not mistake decoration for polish.
 - **Verify:** check the delivered browser/app path, runtime errors, responsive hierarchy, mouse/touch/keyboard behavior, focus, contrast, reduced-motion, relevant states, and the 5-second primary-message check. Static mocks and critic scores are signals, not proof of usability or production readiness.
 
-If quality is not converging after one or two focused iterations, revisit the direction or rubric instead of accumulating micro-tweaks. For the longer source and Claude Code tool mapping, read the public workflow's [`ai-design-loop.md`](https://github.com/chukong-creator/chukong-design/blob/main/references/ai-design-loop.md) and [`claude.md`](https://github.com/chukong-creator/chukong-design/blob/main/references/claude.md) only when that task needs them.
+If quality is not converging after one or two focused iterations, revisit the direction or rubric instead of accumulating micro-tweaks. For the longer source and Claude Code tool mapping, read the public workflow's [`ai-design-loop.md`](https://github.com/chukong-creator/chukong-design/blob/main/skills/chukong-design/references/ai-design-loop.md) and [`claude.md`](https://github.com/chukong-creator/chukong-design/blob/main/skills/chukong-design/references/claude.md) only when that task needs them.
 
 ## Working contract
 
