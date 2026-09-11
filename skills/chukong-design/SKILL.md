@@ -1,68 +1,67 @@
 ---
 name: chukong-design
-description: Guide design, implementation, and review of product interfaces with the Chukong Design System. Use for Chukong visual direction, components, states, motion, accessibility, and system adoption; do not invent exact rules when the canonical reference is unavailable.
+description: Apply the Chukong design method to product interface work. Use it for context, visual exploration, critique, subtraction, and verification; optionally pair it with Chukong Design System, another system, or no design system.
 ---
 
-# Chukong Design
+# Chukong Design Method
 
-Use this skill as a public, reference-led adapter for the Chukong Design System. It helps an agent make consistent design decisions; it is not a runtime component library and contains no copied tokens, component source, fonts, or brand assets.
+This is a method-first skill. It teaches an agent how to understand a design task, explore a direction, build a rendered surface, critique it, remove unnecessary complexity, and verify the delivered path. The Chukong Design System is an optional implementation reference, not a requirement and not the default visual style for every project.
 
-## Choose the access mode
+## Separate method from system
 
-Before making a precise visual or implementation claim, identify the strongest reference available:
+Before making a visual or implementation claim, identify the selected design-system context:
 
-- **Full reference** — the private [`chukong-design-system`](https://github.com/chukong-creator/chukong-design-system) is readable. Treat `DESIGN.md` as the contract, `packages/tokens/src` as the token source, and `packages/react/src` as the component behavior/API source.
-- **Consumer project** — the product already contains `@chukong-design/react` or local Chukong token/component docs. Inspect the installed version and real project usage first; project code is the implementation truth for that version.
-- **Public guidance** — the private reference is unavailable. Use the public [reference map](https://github.com/chukong-creator/chukong-design-skill#reference-map) and the user’s supplied project context for direction, but label canonical status as unverified. Ask for access or a local checkout when exact tokens, APIs, versions, or release behavior matter.
+- **Method-only (default):** apply this skill's process. Use the project's conventions, platform primitives, or an explicitly agreed visual direction. Do not assume Chukong tokens, colors, components, or brand personality.
+- **Chukong system selected:** when the user chooses Chukong or the project is already bound to it, optionally read the private [`chukong-design-system`](https://github.com/chukong-creator/chukong-design-system). Treat `DESIGN.md` as its contract, `packages/tokens/src` as its token source, and `packages/react/src` as its component/API source.
+- **Another system selected:** apply this method, but use the chosen system and the project's installed version as the implementation truth. Do not replace it with Chukong merely because this skill is active.
+- **Chukong requested but unavailable:** continue with method-level work and label Chukong-specific decisions as unverified. Ask for access or a local checkout when exact tokens, APIs, versions, or release behavior matter; never invent them.
 
-Never fill an access gap by inventing Chukong hex values, component APIs, or brand rules.
+Do not load private Chukong references solely because this skill is installed.
 
-## Route the task to the smallest useful reference
+## Route only the references the task needs
 
-Read the repository [reference map](https://github.com/chukong-creator/chukong-design-skill#reference-map), then load only what the task needs:
+Read the public [reference map](https://github.com/chukong-creator/chukong-design-skill#reference-map), then choose the smallest useful source:
 
-| Task | First reference |
+| Need | First source |
 | --- | --- |
-| Overall direction, hierarchy, completion criteria | `DESIGN.md` |
-| Color, surfaces, type, density, visual personality | `docs/style-brief.md` |
-| Component choice, composition, states, errors | `docs/components.md` |
-| Timing, continuity, reduced-motion | `docs/motion.md` |
-| Integration, upgrade, migration | `docs/adoption.md` |
-| Exact token or React API | `packages/tokens/src`, then `packages/react/src` |
-| HTML prototype, rendered preview, AI design loop | public `chukong-design` workflow references |
+| User, task, constraints, direction, hierarchy, completion | This method and the user's product context |
+| Exact token, component, theme, or API | The selected design system and the real consumer project |
+| Chukong-specific visual or behavior rule | Chukong `DESIGN.md`, style, component, or motion reference (only when selected) |
+| HTML prototype, rendered preview, design checker | Public `chukong-design` workflow, if the project uses it |
+| Claude Design loop details or Claude Code tool mapping | Public `ai-design-loop.md` and `claude.md` |
 
-Vercel, Meta, Fluid Functionalism and other listed research are inspiration and comparison inputs, never the source of Chukong truth.
+External Vercel, Meta, Fluid Functionalism, and other research are comparison inputs, never an automatic visual authority.
 
-## Claude Design method
+## Chukong Design method
 
-For a new visual direction, important surface, high-fidelity prototype, or quality-sensitive redesign, use this loop. Do not force it onto a small bug, token-only change, accessibility-only audit, or tightly scoped copy edit.
+For a new visual direction, important surface, high-fidelity prototype, or quality-sensitive redesign, use this loop. Skip the full loop for a small bug, token-only change, accessibility-only audit, or tightly scoped copy edit.
 
 `Context → Discover → Define → Build → Critique → Deliver → Verify`
 
-- **Context:** establish the user, situation, primary task, fixed constraints, open decisions, important states, and acceptance check. Describe an existing identity from evidence before changing it.
-- **Discover:** explore a small set of genuinely different directions (usually 2–3), each with a feeling, composition, material/type language, memorable choice, and reason it could fit. Let the user steer taste; do not create variants only to fill a catalog.
+- **Context:** establish the user, situation, primary task, fixed constraints, open decisions, important states, platform, and acceptance check. Describe an existing identity from evidence before changing it.
+- **Discover:** explore a small set of genuinely different directions (usually 2–3), each with a feeling, composition, material/type language, memorable choice, and reason it could fit. Let the user steer taste; do not make variants only to fill a catalog.
 - **Define:** freeze the chosen direction into a brief with emotional intent, layout topology, roles for type/color/surface/imagery/motion, content density, one primary action, anti-references, and a stable rubric.
-- **Build:** use the real Chukong components/tokens when available and render with representative sanitized data. Add imagery, 3D, shader, video, or other enrichment only when it communicates meaning that structure and type cannot.
+- **Build:** use the selected design system when one exists; otherwise use project conventions or accessible platform primitives. Render with representative sanitized data. Add imagery, 3D, shader, video, or other enrichment only when it communicates meaning that structure and type cannot.
 - **Critique:** keep implementation and visual critique independent when possible. The critic judges the fresh rendered surface, not the code or implementation effort, and reports `what works → biggest gaps → concrete fixes in priority order → score with evidence → unverified questions`.
 - **Deliver:** run a subtraction pass. Remove or simplify elements that do not improve understanding, action, trust, orientation, feedback, or the intended feeling; do not mistake decoration for polish.
 - **Verify:** check the delivered browser/app path, runtime errors, responsive hierarchy, mouse/touch/keyboard behavior, focus, contrast, reduced-motion, relevant states, and the 5-second primary-message check. Static mocks and critic scores are signals, not proof of usability or production readiness.
 
-If quality is not converging after one or two focused iterations, revisit the direction or rubric instead of accumulating micro-tweaks. For the longer source and Claude Code tool mapping, read the public workflow's [`ai-design-loop.md`](https://github.com/chukong-creator/chukong-design/blob/main/skills/chukong-design/references/ai-design-loop.md) and [`claude.md`](https://github.com/chukong-creator/chukong-design/blob/main/skills/chukong-design/references/claude.md) only when that task needs them.
+If quality is not converging after one or two focused iterations, revisit the direction or rubric instead of accumulating micro-tweaks. Read the longer public [`ai-design-loop.md`](https://github.com/chukong-creator/chukong-design/blob/main/skills/chukong-design/references/ai-design-loop.md) and Claude Code [`claude.md`](https://github.com/chukong-creator/chukong-design/blob/main/skills/chukong-design/references/claude.md) only when that task needs their detail.
 
 ## Working contract
 
 1. Establish the user, situation, primary task, entry point, important states, platform, and acceptance check before styling. Ask only about decisions that materially change the result.
-2. Prefer the canonical `primitive → semantic → component` token path and real `@chukong-design/react` components when the project consumes them. Do not add page-level brand hex values or a competing token namespace.
-3. Preserve light/dark/high-contrast behavior, visible focus, keyboard semantics, responsive layout, and recovery paths for loading, empty, error, disabled, permission, and retry states as relevant.
-4. For a substantial direction or flow, apply the Claude Design loop above: make a short constraint brief, preview the rendered surface with representative sanitized data, critique hierarchy before decoration, and finish with a subtraction pass.
+2. If a design system is selected, follow its `primitive → semantic → component` path and real component API. If no system is selected, use project conventions or accessible platform primitives. Never add a competing token namespace or page-level brand hex values without an explicit product decision.
+3. Preserve the selected system's theme, focus, keyboard, responsive, motion, and recovery behavior; when no system exists, define the minimum behavior needed for the task.
+4. For a substantial direction or flow, apply the method loop: brief, preview, critique hierarchy before decoration, subtract, then verify.
 5. Keep internal review notes out of product copy. For AI output, distinguish fact, inference, recommendation, and uncertainty.
 
 ## Output contract
 
-When delivering a design, implementation, or critique, make the result inspectable by stating:
+When delivering a design, implementation, or critique, state:
 
-- the access mode used and references actually consulted;
-- the decisions made, assumptions, and canonical facts that remain unverified;
+- that the Chukong design method was used and which design system was selected, if any;
+- the references actually consulted, decisions made, assumptions, and facts that remain unverified;
 - the relevant states, responsive behavior, accessibility path, and motion behavior;
 - what was rendered or tested, and what still needs user or product review.
 
@@ -70,9 +69,11 @@ Do not describe a static mock, synthetic fixture, or successful build as proof o
 
 ## Precedence and boundaries
 
+The method governs how work is explored and verified; a selected design system governs its tokens, components, and implementation details:
+
 1. Explicit product, platform, technical, accessibility, privacy, and user decisions.
-2. The canonical Chukong Design System and the real consumer project version.
+2. The selected design system and the real consumer project version, if any.
 3. An approved project visual direction.
-4. External research and screenshots.
+4. The Chukong design method's process heuristics and external research.
 
 Preserve provenance and license notes for borrowed ideas or assets. Never put credentials, private endpoints, personal data, or unredacted customer content in prompts, fixtures, screenshots, or commits. Do not make external releases or other mutations unless the user explicitly authorizes them.
