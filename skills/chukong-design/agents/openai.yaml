@@ -1,3 +1,4 @@
 interface:
   display_name: "Chukong Design"
-  short_description: "Help with Chukong Design tasks"
+  short_description: "Design and review interfaces with Chukong"
+  default_prompt: "Use $chukong-design to review this interface against Chukong principles and propose the smallest high-quality improvements."
