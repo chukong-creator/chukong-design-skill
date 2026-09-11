@@ -1,4 +1,4 @@
 interface:
   display_name: "Chukong Design Method"
   short_description: "Apply a method-first design loop to interfaces"
-  default_prompt: "Use $chukong-design to apply the method to this interface, using the project's selected design system if one exists."
+  default_prompt: "Use $chukong-design to apply the method to this interface and return a brief, critique, subtraction pass, and verification checklist."
